@@ -1,0 +1,16 @@
+console.group("Group 1");
+console.log("massage one");
+console.log("massage two");
+console.group("child Group");
+console.log("massage one");
+console.log("massage two");
+console.group("Grand child Group");
+console.log("massage one");
+console.log("massage two");
+console.groupEnd();
+console.groupEnd();
+console.groupEnd();
+console.group("Group 2");
+console.log("massage one");
+console.log("massage two");
+console.groupEnd();
