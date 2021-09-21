@@ -1,7 +1,8 @@
-let userName = "Elzero";
-console.log(userName.charAt(3)); // e
-console.log(userName.substring(3,4)); // e
-console.log(userName.substr(3,1)); // e
-console.log(userName[3]); // e
-console.log(userName.slice(-3,-2)); // e
-console.log(userName.slice(3,4).repeat(3)); // eee
+console.log(100 == "100"); // true
+console.log(100 < 1000); // true
+console.log(110 > 100 && 10 < 20); // true
+console.log(-10 == "-10"); // true
+console.log(typeof -50 === typeof +"-40"); // true
+console.log(typeof 10 === typeof -"-40"); // true
+console.log(+"10" === 10); // true
+console.log(! 20 === false); // true
