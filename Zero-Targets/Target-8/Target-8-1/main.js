@@ -1,22 +1,22 @@
-// Add Variables Here
-let NumberOne = 10, NumberTwo = 20;
-// Ouput
-console.log(NumberOne+""+NumberTwo); // Normal Concatenate => 1020
-console.log(typeof(NumberOne+""+NumberTwo)); // Normal Concatenate => String
-console.log(`${NumberOne}${NumberTwo}`); // Template Literals Way => 1020
-console.log(typeof(`${NumberOne}${NumberTwo}`)); // Template Literals Way => String
-
-console.log( NumberTwo+"\n"+NumberOne);
-/*
-  Normal Concatenate
-  20
-  10
-*/
-
-console.log(`${NumberTwo}
-${NumberOne}`);
-/*
-  Template Literals Way
-  20
-  10
-*/
+let day = "   thursday  ";
+// You Need To Remove Spaces And Make First Letter Capital => Friday
+day = day.trim();
+switch(day[0].toUpperCase() + day.substring(1)) {
+  case "Friday":
+  case "Saturday":
+  case "Sunday":
+    console.log("No Appointments Available");
+    break;
+  case "Monday":
+  case "Thursday":
+    console.log("From 10:00 AM To 5:00 PM");
+    break;
+  case "Tuesday":
+    console.log("From 10:00 AM To 6:00 PM");
+    break;
+  case "Wednesday":
+    console.log("From 10:00 AM To 7:00 PM");
+    break;
+  default:
+    console.log("Its Not A Valid Day");
+}
