@@ -3,19 +3,27 @@ function getDetails(zName, zAge, zCountry) {
     // Write Your Code Here
     // Osama Mohamed => Osama M.
     // Ahmed ali => Ahmed A.
+
+    let a = zName.indexOf(" ");
+    return `Hello ${zName.substr(0, a)} ${zName[a + 1].toUpperCase()}.`;
   }
   function ageWithMessage(zAge) {
     // Write Your Code Here
     // 38 Is My Age => Your Age Is 38
     // 32 Is The Age => Your Age Is 32
+    return `Your Age Is ` + parseInt(zAge);
   }
   function countryTwoLetters(zCountry) {
     // Write Your Code Here
     // Egypt => You Live In EG
     // Syria => You Live In SY
+    return `You Live In ${zCountry.slice(0, 2).toUpperCase()}`;
   }
   function fullDetails() {
     // Write Your Code Here
+    return `${namePattern(zName)}, ${ageWithMessage(zAge)}, ${countryTwoLetters(
+      zCountry
+    )}`;
   }
   return fullDetails(); // Do Not Edit This
 }

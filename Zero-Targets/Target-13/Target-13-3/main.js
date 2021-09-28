@@ -1,22 +1,16 @@
-let day = "   thursday  ";
-// You Need To Remove Spaces And Make First Letter Capital => Friday
-day = day.trim();
-switch(day[0].toUpperCase() + day.substring(1)) {
-  case "Friday":
-  case "Saturday":
-  case "Sunday":
-    console.log("No Appointments Available");
-    break;
-  case "Monday":
-  case "Thursday":
-    console.log("From 10:00 AM To 5:00 PM");
-    break;
-  case "Tuesday":
-    console.log("From 10:00 AM To 6:00 PM");
-    break;
-  case "Wednesday":
-    console.log("From 10:00 AM To 7:00 PM");
-    break;
-  default:
-    console.log("Its Not A Valid Day");
-}
+// function checker(zName) {
+//   return function (status) {
+//     return function (salary) {
+//       return status === "Available"
+//         ? `${zName}, My Salary Is ${salary}`
+//         : `Iam Not Avaialble`;
+//     };
+//   };
+// }
+let checker = (zName) => (status) => (salary) =>
+  status === "Available"
+    ? `${zName}, My Salary Is ${salary}`
+    : `Iam Not Avaialble`;
+
+console.log(checker("Osama")("Available")(4000)); // My Salary Is 4000
+console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble

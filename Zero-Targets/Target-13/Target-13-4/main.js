@@ -1,22 +1,20 @@
-let day = "   thursday  ";
-// You Need To Remove Spaces And Make First Letter Capital => Friday
-day = day.trim();
-switch(day[0].toUpperCase() + day.substring(1)) {
-  case "Friday":
-  case "Saturday":
-  case "Sunday":
-    console.log("No Appointments Available");
-    break;
-  case "Monday":
-  case "Thursday":
-    console.log("From 10:00 AM To 5:00 PM");
-    break;
-  case "Tuesday":
-    console.log("From 10:00 AM To 6:00 PM");
-    break;
-  case "Wednesday":
-    console.log("From 10:00 AM To 7:00 PM");
-    break;
-  default:
-    console.log("Its Not A Valid Day");
+function specialMix(...data) {
+  // Your Code Here
+  let result = 0;
+  let count = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (!Number.isNaN(parseInt(data[i]))) {
+      result += parseInt(data[i]);
+    } else {
+      count++;
+    }
+  }
+  if (count === data.length) {
+    return "All Is Strings";
+  } else return result;
 }
+
+console.log(specialMix(10, 20, 30)); // 60
+console.log(specialMix("10 Test", "Testing", "20Cool")); // 30
+console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
