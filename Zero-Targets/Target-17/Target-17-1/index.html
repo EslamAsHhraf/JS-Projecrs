@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Target 17-1</title>
-    <script src="main.js"></script>
+    <script>
+      window.onload = function () {
+        let mya = document.querySelectorAll(`.open`);
+        for (let i = 0; i < mya.length; i++) {
+          if (mya[i].textContent === "Elzero") {
+            mya[i].click();
+            break;
+          }
+        }
+      };
+    </script>
   </head>
 
   <body>
-    <div id="elzero" class="element" name="js">JavaScript</div>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+    <script src="main.js"></script>
   </body>
 </html>
