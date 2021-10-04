@@ -1,17 +1,13 @@
 window.onload = function () {
-  let element = document.querySelector(".our-element");
-  //start
-  let start = document.createElement("div");
-  start.className = "Start Element";
-  start.title = "End Element";
-  start.setAttribute("data-value", "Start");
-  start.innerHTML = "Start";
-  element.before(start);
-  //end
-  let end = document.createElement("div");
-  end.className = "end";
-  end.title = "End Element";
-  end.setAttribute("data-value", "End");
-  end.innerHTML = "End";
-  element.after(end);
+  let mydiv = document.createElement("div");
+  mydiv.innerHTML = "10";
+  document.body.appendChild(mydiv);
+
+  function countdown() {
+    mydiv.innerHTML -= 1;
+    if (mydiv.innerHTML === "0") {
+      clearInterval(counter);
+    }
+  }
+  let counter = setInterval(countdown, 1000);
 };
